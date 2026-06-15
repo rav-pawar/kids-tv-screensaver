@@ -1,0 +1,10 @@
+# Dependencies for the processing scripts (scripts/darken_bottom.py, scripts/add_image.py).
+# These turn a source image into a darkened, AerialViews-ready MP4 + entries.json asset.
+#
+# Also required, but NOT a pip package — install separately and put on PATH:
+#   ffmpeg  (https://ffmpeg.org/ ; on Windows: winget install Gyan.FFmpeg)
+#
+# Image GENERATION (driving the Gemini web UI) is a separate, optional toolchain
+# kept outside this public repo — see the project notes for that.
+
+pillow>=10,<13

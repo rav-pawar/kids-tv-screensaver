@@ -38,6 +38,19 @@ When a release with CSV support ships, [`media_list.csv`](media_list.csv) can be
 | `media_list.csv` | Image feed for when the app's CSV support is released. |
 | `schedule.json` | The timings shown on the images (source of truth). |
 
+## Prerequisites (only to edit/add images)
+
+You don't need anything to *use* the feed — just the URL above. To run the helper scripts
+that build MP4s and update the feed, install:
+
+```sh
+winget install Gyan.FFmpeg        # ffmpeg — native binary, not a pip package (verified: 8.1.1)
+pip install -r requirements.txt   # Pillow — Python image library
+```
+
+`ffmpeg` must be on your PATH. (Image *generation* uses a separate browser-automation toolchain
+kept outside this repo — see the project notes.)
+
 ## Updating / adding images
 
 **Add a new theme image** — generate it (bottom 25% kept clear of text), save to `images/`, then:
