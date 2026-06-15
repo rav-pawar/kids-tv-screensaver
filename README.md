@@ -7,24 +7,46 @@ The images display daily school timings so the family can see them at a glance o
 
 ## How it's used
 
-AerialViews reads a **custom media feed** — a CSV list of image URLs. Point AerialViews at
-the raw URL of [`media_list.csv`](media_list.csv) in this repo:
+AerialViews reads a **custom feed**. Point AerialViews at the raw URL of
+[`entries.json`](entries.json) in this repo:
 
 ```
-https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/media_list.csv
+https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/entries.json
 ```
 
-In AerialViews: **Settings → Custom feed → Custom Media URLs** → paste the URL above.
+In AerialViews: **Settings → Sources → Custom feeds → enable → Feed URLs** → paste the URL above.
+
+### Why a video feed (entries.json) and not a CSV of images?
+
+AerialViews can show remote *photos* via a CSV feed, but **CSV support is only on the app's
+`master` branch — it is not in any released version (≤ v1.8.2).** On a released build, a `.csv`
+feed URL fails with *"URL does not contain a valid manifest.json / No valid URLs found."*
+
+The released app **does** support the `entries.json` video feed (since v1.8.0). So each schedule
+image is encoded as a short static-image **MP4** and listed in `entries.json`. This works on the
+current app and still keeps everything hosted on GitHub.
+
+When a release with CSV support ships, [`media_list.csv`](media_list.csv) can be used instead.
 
 ## Contents
 
 | File | Purpose |
 |------|---------|
-| `images/` | The screensaver images (1920×1080 PNG). |
-| `media_list.csv` | The feed AerialViews reads (`url,description` per line). |
+| `entries.json` | The feed AerialViews reads now (video format). |
+| `videos/` | Static-image MP4s referenced by `entries.json`. |
+| `images/` | Source images (used to build the MP4s; and for CSV later). |
+| `media_list.csv` | Image feed for when the app's CSV support is released. |
 | `schedule.json` | The timings shown on the images (source of truth). |
 
 ## Updating
 
-Edit or replace an image in `images/`, keep `media_list.csv` in sync, and push.
-AerialViews picks up changes on its next refresh.
+To change an image: replace it in `images/`, re-encode the MP4 into `videos/`, keep
+`entries.json` in sync, and push. AerialViews picks up changes on its next refresh.
+
+Encode command (any image → 30s 1080p MP4):
+
+```sh
+ffmpeg -y -loop 1 -i images/NN_name.jpg -t 30 -r 24 -c:v libx264 -pix_fmt yuv420p \
+  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1" \
+  -movflags +faststart -an videos/NN_name.mp4
+```

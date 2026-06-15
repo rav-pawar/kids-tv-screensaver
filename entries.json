@@ -1,0 +1,11 @@
+{
+  "assets": [
+    {
+      "id": "01_sunny_bus",
+      "accessibilityLabel": "School hours",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4"
+    }
+  ]
+}
