@@ -1,0 +1,7 @@
+{
+  "title": "School Hours",
+  "schedule": [
+    { "label": "15 June", "effective": "2026-06-15", "hours": "9:15 AM – 11:30 AM" },
+    { "label": "16 June onwards", "effective": "2026-06-16", "hours": "9:15 AM – 12:30 PM" }
+  ]
+}
