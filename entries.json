@@ -8,6 +8,69 @@
       "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4",
       "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4",
       "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/01_sunny_bus.mp4"
+    },
+    {
+      "id": "02_safari_animals",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/02_safari_animals.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/02_safari_animals.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/02_safari_animals.mp4"
+    },
+    {
+      "id": "03_space",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/03_space.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/03_space.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/03_space.mp4"
+    },
+    {
+      "id": "04_ocean",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/04_ocean.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/04_ocean.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/04_ocean.mp4"
+    },
+    {
+      "id": "05_classroom",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/05_classroom.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/05_classroom.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/05_classroom.mp4"
+    },
+    {
+      "id": "06_garden",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/06_garden.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/06_garden.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/06_garden.mp4"
+    },
+    {
+      "id": "07_dinosaurs",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/07_dinosaurs.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/07_dinosaurs.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/07_dinosaurs.mp4"
+    },
+    {
+      "id": "08_farm",
+      "accessibilityLabel": "School hours",
+      "timeOfDay": "day",
+      "scene": "nature",
+      "url-1080-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/08_farm.mp4",
+      "url-4K-SDR": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/08_farm.mp4",
+      "url-1080-H264": "https://raw.githubusercontent.com/rav-pawar/kids-tv-screensaver/main/videos/08_farm.mp4"
     }
   ]
 }
