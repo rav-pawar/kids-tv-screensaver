@@ -38,12 +38,23 @@ When a release with CSV support ships, [`media_list.csv`](media_list.csv) can be
 | `media_list.csv` | Image feed for when the app's CSV support is released. |
 | `schedule.json` | The timings shown on the images (source of truth). |
 
-## Updating
+## Updating / adding images
 
-To change an image: replace it in `images/`, re-encode the MP4 into `videos/`, keep
-`entries.json` in sync, and push. AerialViews picks up changes on its next refresh.
+**Add a new theme image** — generate it (bottom 25% kept clear of text), save to `images/`, then:
 
-Encode command (any image → 30s 1080p MP4):
+```sh
+python scripts/add_image.py images/NN_name.jpg
+git add -A && git commit -m "Add NN_name screensaver" && git push
+```
+
+`add_image.py` darkens the bottom strip, encodes the MP4, and adds the asset to `entries.json`
+with the `timeOfDay`/`scene` tags the released app needs. AerialViews rotates through every asset,
+so you can add as many as you like. Allow ~5 min for the raw-URL cache after pushing.
+
+**Change an existing image:** replace it in `images/`, run the same command (add `--no-darken`
+if the file is already darkened), commit, and push.
+
+Low-level encode (if doing it by hand):
 
 ```sh
 ffmpeg -y -loop 1 -i images/NN_name.jpg -t 30 -r 24 -c:v libx264 -pix_fmt yuv420p \
